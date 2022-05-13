@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planeta Jean</title>
+    <style>
+        body{
+            margin: 0px;
+        }
+        #contenido{
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg,rgb(9, 9, 28),rgb(94, 42, 126),rgb(12, 28, 32));
+            position: fixed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+        #formContente{
+            width: 500px;
+            height: 500px;
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transform-style: preserve-3d;
+            transform: rotateY(20deg);
+        }
+        #planet{
+            width:200px;
+            height: 200px;
+            background:linear-gradient(45deg,rgb(103, 126, 240),rgb(9, 11, 10),rgb(45, 35, 35));;
+            border-radius: 50%;
+            overflow: hidden;
+            position: absolute;
+            transform-style: preserve-3d;
+            z-index: 1;
+            
+        }
+
+        #orbitOne{
+            width: 280px;
+            height: 280px;
+            border:8px dashed white;
+            position:  absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transform-style: preserve-3d;
+            transform: rotateX(65deg);
+            border-radius: 50%;
+            z-index: 2;
+            animation: rt1 8s linear infinite;
+            box-shadow: 0px 0px 30px white;;
+        }
+        #orbitOne span{
+            position: absolute;
+            width: 0%;
+            height: 150%;
+            transform: rotate(calc(27deg * var(--i) + 30deg)) rotateX(0deg);
+            color:rgb(255, 255, 255);
+            font-size:60px;
+            font-weight: bold;
+            font-family: sans-serif;
+           
+            ;
+            
+        }
+
+        #orbitTw{
+            width: 380px;
+            height: 380px;
+            border:3px dashed white;
+            position:  relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transform-style: preserve-3d;
+            transform: rotateX(65deg);
+            border-radius: 50%;
+            animation: rt2 18s linear infinite;
+            z-index: 2;
+            box-shadow: 0px 0px 30px rgb(255, 255, 255)
+
+        }
+        #orbitTw span{
+            position: absolute;
+            width: 0%;
+            height: 150%;
+            transform: rotate(calc(16.5deg * var(--i) + 30deg)) rotateX(0deg);
+            color:white;
+            font-size:80px;
+            font-family: sans-serif;
+            text-shadow: 0px 0px 10px white;
+            font-weight: bold;
+            
+        }
+        @keyframes rt1 {
+            from{
+                transform: rotateX(50deg) rotateZ(425deg);
+                
+            }
+            to{
+                transform: rotateX(50deg) rotateZ(60deg); 
+               
+            }
+        }
+        @keyframes rt2 {
+            from{
+                transform: rotateX(30deg) rotateZ(65deg);
+            }
+            to{
+                transform: rotateX(30deg) rotateZ(425deg); 
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="contenido">    
+
+        <div id="formContente">
+
+            <div id="planet"></div>
+
+            <div id="orbitOne">
+                <span style="--i:1">P</span>
+                <span style="--i:2">l</span>
+                <span style="--i:3">a</span>
+                <span style="--i:4">n</span>
+                <span style="--i:5">e</span>
+                <span style="--i:6">t</span>
+                <span style="--i:7">a</span>
+                <span style="--i:8">&nbsp;</span>
+                <span style="--i:9">J</span>
+                <span style="--i:10">e</span>
+                <span style="--i:11">a</span>
+                <span style="--i:12">n</span>
+                
+            </div>
+
+            <div id="orbitTw">
+                <span style="--i:1">P</span>
+                <span style="--i:2">r</span>
+                <span style="--i:3">o</span>
+                <span style="--i:4">g</span>
+                <span style="--i:5">r</span>
+                <span style="--i:6">a</span>
+                <span style="--i:7">m</span>
+                <span style="--i:8">a</span>
+                <span style="--i:9">r</span>
+                <span style="--i:10">&nbsp;</span>
+                <span style="--i:11">E</span>
+                <span style="--i:12">s</span>
+                <span style="--i:13">&nbsp;</span>
+                <span style="--i:14">L</span>
+                <span style="--i:15">o</span>
+                <span style="--i:16">&nbsp;</span>
+                <span style="--i:17">M</span>
+                <span style="--i:18">e</span>
+                <span style="--i:19">j</span>
+                <span style="--i:20">o</span>
+                <span style="--i:21">r</span>
+
+                
+            </div>
+
+        </div>
+
+
+    </div>
+</body>
+</html>
